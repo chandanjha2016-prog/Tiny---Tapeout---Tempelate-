@@ -1,8 +1,5 @@
-
----
 yaml_version: 6
 project:
-  wokwi_id: 0
   title: "Jamalpur Safety Chip"
   author: "Chandan Jha"
   description: "World Safety For All - SOS, Fall, Gas detection for vulnerable people from Jamalpur Bihar"
@@ -12,28 +9,35 @@ project:
   top_module: "tt_um_chandanjha_safety"
   source_files:
     - "src/project.v"
-  # How your design works
-  how_it_works: "SOS button ui_in[0], Fall sensor ui_in[1], Gas sensor ui_in[2]. When any is 1, siren uo_out[0] and light uo_out[1] ON. Vibration uo_out[2] on fall."
-  how_to_test: "Set ui_in 1 for SOS, check uo_out 0. Set ui_in 2 for fall, check uo_out 0,1,2."
-  external_hw: "Buttons, MPU6050, MQ2 sensor"
-  # Pinout
-  inputs:
-    - "sos"
-    - "fall"
-    - "gas"
-    - ""
-    - ""
-    - ""
-    - ""
-    - ""
-  outputs:
-    - "siren"
-    - "light"
-    - "vibration"
-    - ""
-    - ""
-    - ""
-    - ""
-    - ""
+  how_it_works: "SOS ui[0], Fall ui[1], Gas ui[2] triggers siren uo[0] and light uo[1]. Vibration uo[2] on fall."
+  how_to_test: "Set ui[0]=1 for SOS check uo[0]. Set ui[1]=1 for fall check uo[0],uo[1],uo[2]."
+  external_hw: "Buttons, MPU6050, MQ2"
   discord: ""
   doc_link: ""
+  clock_hz: 0
+  analog_pins: 0
+  pinout:
+    ui[0]: "sos_button"
+    ui[1]: "fall_sensor"
+    ui[2]: "gas_sensor"
+    ui[3]: ""
+    ui[4]: ""
+    ui[5]: ""
+    ui[6]: ""
+    ui[7]: ""
+    uo[0]: "siren"
+    uo[1]: "light"
+    uo[2]: "vibration"
+    uo[3]: ""
+    uo[4]: ""
+    uo[5]: ""
+    uo[6]: ""
+    uo[7]: ""
+    uio[0]: ""
+    uio[1]: ""
+    uio[2]: ""
+    uio[3]: ""
+    uio[4]: ""
+    uio[5]: ""
+    uio[6]: ""
+    uio[7]: ""
