@@ -14,7 +14,6 @@ project:
   external_hw: "Buttons, MPU6050, MQ2"
   discord: ""
   doc_link: ""
-  clock_hz: 0
   analog_pins: 0
   pinout:
     ui[0]: "sos_button"
