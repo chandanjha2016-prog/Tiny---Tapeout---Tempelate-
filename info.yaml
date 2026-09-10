@@ -1,1 +1,39 @@
 
+---
+yaml_version: 6
+project:
+  wokwi_id: 0
+  title: "Jamalpur Safety Chip"
+  author: "Chandan Jha"
+  description: "World Safety For All - SOS, Fall, Gas detection for vulnerable people from Jamalpur Bihar"
+  language: "Verilog"
+  clock_hz: 0
+  tiles: "1x1"
+  top_module: "tt_um_chandanjha_safety"
+  source_files:
+    - "src/project.v"
+  # How your design works
+  how_it_works: "SOS button ui_in[0], Fall sensor ui_in[1], Gas sensor ui_in[2]. When any is 1, siren uo_out[0] and light uo_out[1] ON. Vibration uo_out[2] on fall."
+  how_to_test: "Set ui_in 1 for SOS, check uo_out 0. Set ui_in 2 for fall, check uo_out 0,1,2."
+  external_hw: "Buttons, MPU6050, MQ2 sensor"
+  # Pinout
+  inputs:
+    - "sos"
+    - "fall"
+    - "gas"
+    - ""
+    - ""
+    - ""
+    - ""
+    - ""
+  outputs:
+    - "siren"
+    - "light"
+    - "vibration"
+    - ""
+    - ""
+    - ""
+    - ""
+    - ""
+  discord: ""
+  doc_link: ""
